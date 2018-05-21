@@ -4,7 +4,6 @@ module.exports = class Teacher extends Person {
   constructor(id, name, age, cla){
     super(id, name, age)
     this.klasses = cla
-    console.log(this.klasses)
   }
   introduce() {
     if(this.klasses){
@@ -17,9 +16,10 @@ module.exports = class Teacher extends Person {
     }
   }
   isTeaching(Student){
-    let studentClass={number:Student.klass}
-    if(this.klasses.includes(studentClass)){
-
+    if(Student.klass.isIn(this.klasses)){
+      return true
+    }else{
+      return false
     }
   }
 }

@@ -7,10 +7,10 @@ module.exports = class Class {
       return "Class " + this.number
     }
     assignLeader(Student){
-      if(Student.klass == this){
+      if(Student.klass.number == this.number){
         this.leader = Student;
       }else{
-         return "It is not one of us."
+         console.log( "It is not one of us.")
       }
     } 
     appendMember(Student){

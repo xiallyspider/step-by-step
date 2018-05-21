@@ -126,7 +126,6 @@ describe("Class", () => {
             const klass = new Class(2);
             const otherKlass = new Class(3);
             const student = new Student(1, "Jerry", 21, otherKlass);
-
             klass.assignLeader(student);
 
             expect(klass.leader).not.equal(student);
